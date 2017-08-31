@@ -11,8 +11,6 @@ import requests
 import hashlib
 import random
 
-from common import importBibTeXIntoBibDesk
-
 
 # get the links
 bibtex_link = sys.argv[1]
@@ -26,4 +24,5 @@ headers = {'User-Agent': 'Mozilla/5.0',
 r = requests.get(bibtex_link, headers=headers)
 bibtex = r.text
 
-importBibTeXIntoBibDesk(bibtex)
+# show bibtex
+sys.stdout.write(bibtex)

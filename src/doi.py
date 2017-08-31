@@ -12,7 +12,7 @@ import sys
 import re
 from subprocess import call
 
-from common import importBibTeXIntoBibDesk, runAppleScript
+from common import runAppleScript
 
 
 # get the DOI
@@ -58,9 +58,8 @@ if action == 'bibtex':
     #   journal name.  You could potentially parse out other bits of info from the
     #   BibTeX as search criteria. ]
 
-    # import bibtex
-    importBibTeXIntoBibDesk(bibtex, PDFURL)
-
+    # show bibtex
+    sys.stdout.write(bibtex)
 
 
 elif action == 'url':
@@ -106,8 +105,3 @@ elif action == 'ref':
     runAppleScript(script)
 
     sys.stdout.write(ref)
-
-
-
-
-

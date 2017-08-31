@@ -32,8 +32,7 @@ headers = {'User-Agent': 'Mozilla/5.0',
 
 
 # search on google cscholar
-proxies = {"http": "http://127.0.0.1:8888", "https": "http://127.0.0.1:8888"}
-r = requests.get('http://scholar.google.com/scholar', params=params, headers=headers, proxies=proxies)
+r = requests.get('https://scholar.google.com/scholar', params=params, headers=headers)
 # r.encoding = 'utf-8'
 
 # parse data
